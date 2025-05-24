@@ -88,20 +88,38 @@ const PatientForm = () => {
       physicianPhone: formData.physicianPhone
     });
 
-    await db.exec(`INSERT INTO patients (
-      fullName, dob, gender, maritalStatus, address, phone, email, reason,
-      emergencyName, emergencyRelation, emergencyPhone,
-      primaryInsurance, primaryPolicyholder, primaryPolicyNumber, primaryGroupNumber,
-      secondaryPolicyholder, secondaryPolicyNumber, secondaryGroupNumber,
-      physicianName, clinicName, physicianPhone
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, [
-      formData.fullName, formData.dob, formData.gender, formData.maritalStatus,
-      formData.address, formData.phone, formData.email, formData.reason,
-      formData.emergencyName, formData.emergencyRelation, formData.emergencyPhone,
-      formData.primaryInsurance, formData.primaryPolicyholder, formData.primaryPolicyNumber, formData.primaryGroupNumber,
-      formData.secondaryPolicyholder, formData.secondaryPolicyNumber, formData.secondaryGroupNumber,
-      formData.physicianName, formData.clinicName, formData.physicianPhone
-    ]);
+  await db.exec(
+        `INSERT INTO patients (
+        fullName, dob, gender, maritalStatus, address, phone, email, reason,
+        emergencyName, emergencyRelation, emergencyPhone,
+        primaryInsurance, primaryPolicyholder, primaryPolicyNumber, primaryGroupNumber,
+        secondaryPolicyholder, secondaryPolicyNumber, secondaryGroupNumber,
+        physicianName, clinicName, physicianPhone
+      ) VALUES (
+        '${formData.fullName.replace(/'/g, "''")}',
+        '${formData.dob}',
+        '${formData.gender}',
+        '${formData.maritalStatus.replace(/'/g, "''")}',
+        '${formData.address.replace(/'/g, "''")}',
+        '${formData.phone}',
+        '${formData.email.replace(/'/g, "''")}',
+        '${formData.reason.replace(/'/g, "''")}',
+        '${formData.emergencyName.replace(/'/g, "''")}',
+        '${formData.emergencyRelation.replace(/'/g, "''")}',
+        '${formData.emergencyPhone}',
+        '${formData.primaryInsurance.replace(/'/g, "''")}',
+        '${formData.primaryPolicyholder.replace(/'/g, "''")}',
+        '${formData.primaryPolicyNumber.replace(/'/g, "''")}',
+        '${formData.primaryGroupNumber.replace(/'/g, "''")}',
+        '${formData.secondaryPolicyholder.replace(/'/g, "''")}',
+        '${formData.secondaryPolicyNumber.replace(/'/g, "''")}',
+        '${formData.secondaryGroupNumber.replace(/'/g, "''")}',
+        '${formData.physicianName.replace(/'/g, "''")}',
+        '${formData.clinicName.replace(/'/g, "''")}',
+        '${formData.physicianPhone}'
+      )`
+      );
+
 
     console.log("✅ Patient inserted successfully");
 

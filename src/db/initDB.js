@@ -1,6 +1,6 @@
+
 import { PGlite } from "https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js";
 let db;
-
 export async function getDB() {
   if (!db) {
     // Give the database a name so it persists in IndexedDB
@@ -8,7 +8,7 @@ export async function getDB() {
 
     await db.exec(`
       CREATE TABLE IF NOT EXISTS patients (
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         fullName TEXT,
         dob TEXT,
         gender TEXT,
