@@ -83,7 +83,7 @@ const PatientForm = () => {
 
   return (
    <>
-      <header>Patient Registration App</header>
+      
 
       <form onSubmit={handleSubmit} className="form-container">
         <h2 className="form-title">Patient Registration Form</h2>

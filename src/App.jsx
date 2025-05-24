@@ -7,7 +7,7 @@ const App = () => {
 
   return (
   <div className="container">
-      <h1>Patient's Registration App</h1>
+      <h1>Patient Registration</h1>
       <div className="buttons">
         <button onClick={() => setShowList(false)}>Register New Patient</button>
         <button onClick={() => setShowList(true)}>View All Patients</button>
