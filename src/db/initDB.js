@@ -1,14 +1,14 @@
-
 import { PGlite } from "https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js";
 let db;
+
 export async function getDB() {
   if (!db) {
     // Give the database a name so it persists in IndexedDB
-    db = new PGlite();
+    db = new PGlite("idb://patients");
 
     await db.exec(`
       CREATE TABLE IF NOT EXISTS patients (
-        id SERIAL PRIMARY KEY,
+        id SERIAL PRIMARY KEY ,
         fullName TEXT,
         dob TEXT,
         gender TEXT,
@@ -41,4 +41,3 @@ export async function getDB() {
   }
   return db;
 }
-
