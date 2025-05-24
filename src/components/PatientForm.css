@@ -6,6 +6,32 @@ body {
   color: #333;
 }
 
+.top-buttons {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
+.button-main {
+  background-color: #1e1e64;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 0.75rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+.button-main:hover {
+  background-color: #3b3bb0;
+  transform: scale(1.05);
+}
+
 .form-container {
   max-width: 900px;
   margin: 40px auto;
@@ -17,7 +43,7 @@ body {
 
 .form-title {
   text-align: center;
-  font-size: 1.7rem; 
+  font-size: 1.7rem;
   font-weight: 800;
   color: #05051c;
   margin-bottom: 2.5rem;
@@ -32,7 +58,7 @@ fieldset {
 
 legend {
   font-weight: 600;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   padding: 0 0.5rem;
   color: #333;
 }
@@ -66,32 +92,13 @@ legend {
   outline: none;
 }
 
-.button-main {
-  background-color: #1e1e64;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  font-weight: 800;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 0 0.75rem; /* Adds spacing between buttons */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-}
-
-.button-main:hover {
-  background-color: #3b3bb0;
-  transform: scale(1.05);
-}
 button[type="submit"],
 .query-container button {
   display: block;
   margin: 2rem auto 1rem auto;
   background-color: #1e1e64;
   color: #fff;
-  padding: 0.8rem 1.2rem; 
+  padding: 0.8rem 1.2rem;
   font-weight: 800;
   border: none;
   border-radius: 10px;
@@ -145,7 +152,8 @@ button[type="submit"]:hover,
   font-size: 0.95rem;
 }
 
-.query-container th, .query-container td {
+.query-container th,
+.query-container td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
@@ -171,4 +179,31 @@ button[type="submit"]:hover,
   .form-row select {
     width: 100%;
   }
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #161646;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #d1e0ff;
 }
