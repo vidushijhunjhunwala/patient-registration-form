@@ -13,13 +13,14 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #0a0a3c;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 fieldset {
-  border: none;
+  padding: 1rem;
+  border: 1px solid #ccc;
   margin-bottom: 1.5rem;
-  padding: 0;
+  border-radius: 8px;
 }
 
 legend {
