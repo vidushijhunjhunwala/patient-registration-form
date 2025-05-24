@@ -1,21 +1,27 @@
+// src/App.jsx
 import React, { useState } from 'react';
 import PatientForm from './components/PatientForm';
-import PatientList from './components/PatientList';
+import PatientRecords from './components/PatientList';
+import SQLQueryPage from './components/SqlQueryPage';
 
-const App = () => {
-  const [showList, setShowList] = useState(false);
+function App() {
+  const [page, setPage] = useState('register');
 
   return (
-  <div className="container">
-      <h1><center>Patient Registration System</center></h1>
-      <div className="buttons"><center>
-        <button onClick={() => setShowList(false)}>Register</button>
-        <button onClick={() => setShowList(true)}>Records</button></center>
+    <div className="app">
+      <h1 className="title">Patient Registration App</h1>
+      <div className="nav-buttons">
+        <button onClick={() => setPage('register')}>Register New Patient</button>
+        <button onClick={() => setPage('records')}>View All Patients</button>
+        <button onClick={() => setPage('query')}>SQL Query</button>
       </div>
-      {showList ? <PatientList /> : <PatientForm />}
-    </div>
 
+      {page === 'register' && <PatientForm />}
+      {page === 'records' && <PatientRecords />}
+      {page === 'query' && <SQLQueryPage />}
+    </div>
   );
-};
+}
 
 export default App;
+
