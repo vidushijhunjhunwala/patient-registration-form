@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { getDB } from '../db/initDB';
-import './PatientForm.css';
+
 
 const initialState = {
   fullName: '',
@@ -60,8 +60,34 @@ const PatientForm = () => {
     setMessage('');
 
     if (!validateForm()) return;
-
+    try {
     const db = await getDB();
+    console.log("✅ Got DB connection");
+
+    console.log("📝 Inserting data:", {
+      fullName: formData.fullName,
+      dob: formData.dob,
+      gender: formData.gender,
+      maritalStatus: formData.maritalStatus,
+      address: formData.address,
+      phone: formData.phone,
+      email: formData.email,
+      reason: formData.reason,
+      emergencyName: formData.emergencyName,
+      emergencyRelation: formData.emergencyRelation,
+      emergencyPhone: formData.emergencyPhone,
+      primaryInsurance: formData.primaryInsurance,
+      primaryPolicyholder: formData.primaryPolicyholder,
+      primaryPolicyNumber: formData.primaryPolicyNumber,
+      primaryGroupNumber: formData.primaryGroupNumber,
+      secondaryPolicyholder: formData.secondaryPolicyholder,
+      secondaryPolicyNumber: formData.secondaryPolicyNumber,
+      secondaryGroupNumber: formData.secondaryGroupNumber,
+      physicianName: formData.physicianName,
+      clinicName: formData.clinicName,
+      physicianPhone: formData.physicianPhone
+    });
+
     await db.exec(`INSERT INTO patients (
       fullName, dob, gender, maritalStatus, address, phone, email, reason,
       emergencyName, emergencyRelation, emergencyPhone,
@@ -77,16 +103,25 @@ const PatientForm = () => {
       formData.physicianName, formData.clinicName, formData.physicianPhone
     ]);
 
+    console.log("✅ Patient inserted successfully");
+
     setMessage('Patient registered successfully!');
     setFormData(initialState);
-  };
+
+  } catch (error) {
+    console.error("❌ Error while inserting patient:", error);
+    setMessage("Something went wrong while registering the patient.");
+  }
+
+
+};
 
   return (
    <>
       
 
       <form onSubmit={handleSubmit} className="form-container">
-        <h2 className="form-title">Register New Patient</h2>
+        <h2 className="form-title"> </h2>
 
 
       <fieldset>
