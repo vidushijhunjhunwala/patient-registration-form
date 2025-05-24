@@ -82,8 +82,12 @@ const PatientForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
-      <h1 className="form-title">Patient Registration Form</h1>
+   <>
+      <header>Patient Registration App</header>
+
+      <form onSubmit={handleSubmit} className="form-container">
+        <h2 className="form-title">Patient Registration Form</h2>
+
 
       <fieldset>
         <legend>Patient Information</legend>
@@ -184,6 +188,11 @@ const PatientForm = () => {
       <button type="submit">Register</button>
       {message && <p className="message">{message}</p>}
     </form>
+     <div className="button-group">
+        <button>Register New Patient</button>
+        <button>View All Patients</button>
+      </div>
+      </>
   );
 };
 
