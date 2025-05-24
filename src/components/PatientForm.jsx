@@ -86,7 +86,7 @@ const PatientForm = () => {
       
 
       <form onSubmit={handleSubmit} className="form-container">
-        <h2 className="form-title">Patient Registration Form</h2>
+        <h2 className="form-title">Register New Patient</h2>
 
 
       <fieldset>
@@ -185,13 +185,10 @@ const PatientForm = () => {
         </div>
       </fieldset>
 
-      <button type="submit">Register</button>
+      <button type="submit">Register Patient</button>
       {message && <p className="message">{message}</p>}
     </form>
-     <div className="button-group">
-        <button>Register New Patient</button>
-        <button>View All Patients</button>
-      </div>
+    
       </>
   );
 };

@@ -7,10 +7,10 @@ const App = () => {
 
   return (
   <div className="container">
-      <h1>Patient Registration</h1>
-      <div className="buttons">
-        <button onClick={() => setShowList(false)}>Register New Patient</button>
-        <button onClick={() => setShowList(true)}>View All Patients</button>
+      <h1><center>Patient Registration System</center></h1>
+      <div className="buttons"><center>
+        <button onClick={() => setShowList(false)}>Register</button>
+        <button onClick={() => setShowList(true)}>Records</button></center>
       </div>
       {showList ? <PatientList /> : <PatientForm />}
     </div>
