@@ -1,45 +1,29 @@
 🩺 Patient Registration Form
+
+
 A responsive, frontend-only patient registration application built using React, Vite, and PGlite (SQLite in the browser). Users can register new patients, edit their details, and view all stored patient records. All data is stored locally using WebAssembly-powered SQLite, so no backend server is required.
 
 Live App: https://vercel.com/vidushi-jhunjhunwalas-projects/patient-registration-form
+
 GitHub Repo: https://github.com/vidushijhunjhunwala/patient-registration-form
 
 
 🛠️ Tech Stack
+
 -React (with Vite)
+
 -PGlite (SQLite via WebAssembly in the browser)
+
 -IndexedDB (for persistent storage)
+
 -HTML & CSS (basic, responsive styling)
 
 
-📌 Folder Structure
-
-patient-app/
-│
-├── public/
-│   └── index.html
-│
-├── src/
-│   ├── components/
-│   │   ├── PatientForm.jsx
-│   │   ├── PatientList.jsx
-│   │   └── SQLQueryPage.jsx
-│   │
-│   ├── db/
-│   │   └── initDB.js
-│   │
-│   ├── styles/
-│   │   └── index.css
-│   │   └── PatientForm.css 
-│   │
-│   ├── App.jsx
-│   └── index.js
-│
-├── package.json
-└── README.md
+<pre> <code> ``` 📌 Folder Structure patient-app/ │ ├── public/ │ └── index.html │ ├── src/ │ ├── components/ │ │ ├── PatientForm.jsx │ │ ├── PatientList.jsx │ │ └── SQLQueryPage.jsx │ │ │ ├── db/ │ │ └── initDB.js │ │ │ ├── styles/ │ │ ├── index.css │ │ └── PatientForm.css │ │ │ ├── App.jsx │ └── index.js │ ├── package.json └── README.md ``` </code> </pre>
 
 
 ✨ Features
+
 📝 Register new patients with detailed personal and emergency contact info
 
 💾 Fully frontend — no backend or external DB required
@@ -56,6 +40,7 @@ patient-app/
 
 
 🛠️ Setup Instructions
+
 1. Clone the repository
    
    git clone https://github.com/vidushijhunjhunwala/patient-registration-form.git
@@ -74,22 +59,32 @@ patient-app/
 
 
 🚀 Usage Guide
+
 ✅ Register a Patient
+
 -Fill in the patient’s personal, emergency, insurance, and physician information.
+
 -Emergency contact section is required; others are optional.
+
 -Click Register New Patient to save the data.
 
 📄 View All Patients
+
 -Click View All Patients to see a table of all registered entries.
+
 -Each record includes an edit button to update info.
 
 🛠️ Edit a Patient
+
 -On the View All Patients page, click the pencil icon beside a patient’s record.
+
 -Make changes and submit the form to update.
 
 🧠 Query Records Using Raw SQL
+
 -Internally, the app uses raw SQL queries via PGlite:
   await db.exec("SELECT * FROM patients");
+
 -You can modify the logic to support custom queries if needed.
 
 
