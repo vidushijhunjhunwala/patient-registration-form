@@ -41,11 +41,17 @@ patient-app/
 
 ✨ Features
 📝 Register new patients with detailed personal and emergency contact info
+
 💾 Fully frontend — no backend or external DB required
+
 🔎 Query records using raw SQL
+
 📋 View a table of all registered patients
+
 ⚡ Fast and persistent storage via IndexedDB
+
 🧾 Edit and update patient records
+
 📦 Data stored using PGlite: SQLite compiled to WebAssembly
 
 
