@@ -3,7 +3,7 @@
 
 A responsive, frontend-only patient registration application built using React, Vite, and PGlite (SQLite in the browser). Users can register new patients, edit their details, and view all stored patient records. All data is stored locally using WebAssembly-powered SQLite, so no backend server is required.
 
-Live App: https://vercel.com/vidushi-jhunjhunwalas-projects/patient-registration-form
+Live App: [(https://patient-registration-form-five.vercel.app/)](https://patient-registration-form-five.vercel.app/)
 
 GitHub Repo: https://github.com/vidushijhunjhunwala/patient-registration-form
 
