@@ -168,7 +168,7 @@ const PatientForm = () => {
           <div className="form-row">
             <label>Full Name*:</label>
             <input
-              name="fullname"
+              name="fullName"
               value={formData.fullName}
               onChange={handleChange}
               required
