@@ -19,9 +19,6 @@ GitHub Repo: https://github.com/vidushijhunjhunwala/patient-registration-form
 -HTML & CSS (basic, responsive styling)
 
 
-<pre> <code> ``` 📌 Folder Structure patient-app/ │ ├── public/ │ └── index.html │ ├── src/ │ ├── components/ │ │ ├── PatientForm.jsx │ │ ├── PatientList.jsx │ │ └── SQLQueryPage.jsx │ │ │ ├── db/ │ │ └── initDB.js │ │ │ ├── styles/ │ │ ├── index.css │ │ └── PatientForm.css │ │ │ ├── App.jsx │ └── index.js │ ├── package.json └── README.md ``` </code> </pre>
-
-
 ✨ Features
 
 📝 Register new patients with detailed personal and emergency contact info
@@ -43,18 +40,22 @@ GitHub Repo: https://github.com/vidushijhunjhunwala/patient-registration-form
 
 1. Clone the repository
    
-   git clone https://github.com/vidushijhunjhunwala/patient-registration-form.git
+   git clone
+
+   https://github.com/vidushijhunjhunwala/patient-registration-form.git
+
    cd patient-registration-form
 
-2. Install dependencies
+3. Install dependencies
 
    npm install
 
-3. Start the development server
+4. Start the development server
 
    npm run dev
 
-4. Open the app in your browser:
+5. Open the app in your browser:
+
    Navigate to http://localhost:5173 (or the port shown in your terminal).
 
 
